@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Oferta } from "@/lib/types/iOferta";
-import { MapPin, Calendar, Edit, Trash2, ArrowRight, Building } from "lucide-react";
+import { MapPin, Edit, Trash2, ArrowRight, Building } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -32,16 +32,16 @@ const getLogoUrl = (logoUrl: string | null | undefined): string | null => {
 export function OfertaCard({ oferta: oferta, showEditOptions = false, onEdit, onDelete }: OfertaCardProps) {
   const [logoError, setLogoError] = useState(false); // Estado para manejar errores de carga del logo
 
-  const calculateDaysAgo = (date: string) => {
-    const publicationDate = new Date(date);
-    const currentDate = new Date();
-    const differenceInTime = currentDate.getTime() - publicationDate.getTime();
-    const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
-    if (differenceInDays <= 0) return "Hoy";
-    if (differenceInDays === 1) return "Hace 1 día";
-    if (differenceInDays > 1) return `Hace ${differenceInDays} días`;
-    console.log(oferta.slug);
-  };
+  // const calculateDaysAgo = (date: string) => {
+    //const publicationDate = new Date(date);
+    //const currentDate = new Date();
+    //const differenceInTime = currentDate.getTime() - publicationDate.getTime();
+    //const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+    //if (differenceInDays <= 0) return "Hoy";
+    //if (differenceInDays === 1) return "Hace 1 día";
+    //if (differenceInDays > 1) return `Hace ${differenceInDays} días`;
+    //console.log(oferta.slug);
+  //};
 
   const handleEditClick = (e: React.MouseEvent) => {
     e.preventDefault();
