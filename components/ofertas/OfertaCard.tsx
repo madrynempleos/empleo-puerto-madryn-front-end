@@ -97,10 +97,6 @@ export function OfertaCard({ oferta: oferta, showEditOptions = false, onEdit, on
               <MapPin className="h-3.5 w-3.5 text-primary" />
               <span className="text-neutral-800 font-medium line-clamp-1">Puerto Madryn</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-secondary/30 py-1 px-2 rounded-full">
-              <Calendar className="h-3.5 w-3.5 text-primary" />
-              <span className="text-neutral-800 font-medium line-clamp-1">{calculateDaysAgo(oferta.fechaPublicacion)}</span>
-            </div>
           </div>
         </CardContent>
 
